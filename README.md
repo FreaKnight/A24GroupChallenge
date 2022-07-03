@@ -58,3 +58,11 @@ One losses the type saftey in typescript with jest's mocks
 4. How do you test in your unit tests to see if the correct properties are being passed to child components.
 
 Via snapshot testing by verifying the elements in the DOM has rendered with the correct values.
+
+### React
+
+Change directory to react-test and startup the project by running `yarn start` after installing the dependencies with `yarn install`.
+
+Using `npm` will also work, just delete [yarn.lock](./react-test/yarn.lock) before running `npm i`
+
+**Note:** I was not able to figure out how that global script `let divHeight;` was going to be used in the HOC as that is not in scope and the 

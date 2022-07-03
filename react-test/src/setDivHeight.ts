@@ -5,7 +5,7 @@ declare global {
 	}
 }
 
-let divHeight;
+let divHeight: number | string = 100;
 window.setDivHeight = (height: number) => divHeight = height;
 
-export {};
+export { divHeight };

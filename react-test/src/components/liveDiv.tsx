@@ -1,20 +1,25 @@
 import React, { useState } from 'react';
 import useWindowWidth from '../hooks/windowWidth';
-import './LiveWidth.css';
+import './LiveDiv.css';
 
-export function LiveWidth() {
-	const [height, setHeight] = useState('initial');
+interface LiveDivProps {
+	height: number | string;
+}
+
+export function LiveDiv(props: LiveDivProps) {
+	console.log({ props });
+	const [height, setHeight] = useState(props.height);
 	const { width } = useWindowWidth();
 	function handleKeyUp(event: React.KeyboardEvent<HTMLInputElement>) {
 		let value = (event.target as HTMLInputElement).value;
-		if (isNaN(Number(value))) {
+		if (isNaN(Number(value)) || value ===  '') {
 			setHeight('initial');
 		} else {
 			setHeight(`${value}px`);
 		}
 	}
 	return (
-		<div className="LiveWidthContainer" style={{ height: `${height}` }}>
+		<div className="LiveDivContainer" style={{ height: `${height}` }}>
 			<span>{`${width}px`}</span>
 			<input
 				className='input'
