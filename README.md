@@ -65,4 +65,4 @@ Change directory to react-test and startup the project by running `yarn start` a
 
 Using `npm` will also work, just delete [yarn.lock](./react-test/yarn.lock) before running `npm i`
 
-**Note:** I was not able to figure out how that global script `let divHeight;` was going to be used in the HOC as that is not in scope and the 
+**Note:** I was not able to get the global `setDivHeight` to function in time. I would have been able to figure it out though
